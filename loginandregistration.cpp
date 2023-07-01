@@ -80,7 +80,9 @@ void ImputError()
     {
         cout <<"\n Invalid Input!!!" << endl;
         cout <<"\n Please Try Again!" << endl;
+        getch();//for the purpose of the windows console app
         exit(1);
+        
     }
 }
 void login()
@@ -135,6 +137,7 @@ void Registration()
     ImputError();
     cout << "\n Enter Your PASSWORD AGAIN TO CONFIRM!:";
     cin>>rpassword_confirm;
+    ImputError();
     cout << endl;
     if(rpassword_confirm==rpassword)
     {
@@ -210,7 +213,7 @@ void  ForgotPassword()
                 {
                         cout <<"\n Invalid Input." << endl;
                     cout <<"\n please Try Again." << endl;
-                    ForgotPassword();
+                    main();
                 }
        
 
@@ -265,12 +268,16 @@ void resetfuntion()
     int count=0;
      cout <<"\n Enter Your username: ";
     cin >> word1;
+    ImputError();
     cout <<"\n Enter Your  New username: ";
       cin >> newword1;
+      ImputError();
          cout <<"\n Enter Your password: ";
     cin>>word2;
+    ImputError();
      cout <<"\n Enter Your New password: ";
        cin >> newword2;
+       ImputError();
     ifstream file2("records.txt");
                 while(file2>>sID>>spassword)
                 {
