@@ -28,8 +28,9 @@ int main()
     cout <<"\n \t Press 1 to Login";
     cout <<"\n \t Press 2 to Register";
     cout <<"\n \t Press 3  if you forgot your password";
-    cout <<"\n \t Press 4 to EXIT";
-     cout <<"\n \t Press 5 to Reset Password ";
+    cout <<"\n \t Press 4 to Reset Password ";
+    cout <<"\n \t Press 5 to EXIT";
+    
 
     cout << "\n";
     cout <<"\n Please Enter Your choice: ";
@@ -52,17 +53,17 @@ int main()
             ForgotPassword();
             break;
 
-
         case 4:
+                    resetfuntion();
+                    break;
+
+        case 5:
             cout<<"\n Logging out of the system................................................................";
             cout<<"---------------------------------------------------------------------------------------------";
             cout <<"\n ******************************Welcome********************************";
             exit(0);
             break;
-        case 5:
-                    resetfuntion();
-                    break;
-
+        
 
         default:
             clear();
